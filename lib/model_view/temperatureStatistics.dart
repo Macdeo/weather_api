@@ -64,6 +64,7 @@ class _TemperatureStatisticsState extends State<TemperatureStatistics> {
                         fontWeight: FontWeight.w600),
                     labelRotation: 90),
                 primaryYAxis: const NumericAxis(
+                  rangePadding: ChartRangePadding.additional,
                   isVisible: false,
                   majorGridLines: MajorGridLines(width: 0),
                   edgeLabelPlacement: EdgeLabelPlacement.none,
