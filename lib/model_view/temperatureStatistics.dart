@@ -48,7 +48,7 @@ class _TemperatureStatisticsState extends State<TemperatureStatistics> {
               // backgroundColor: ConfigColor.black,
                 plotAreaBorderWidth: 0,
                 title: const ChartTitle(
-                    text: 'This Week Weather',
+                    text: 'Weekly Forecast Chart',
                     textStyle: TextStyle(
                         color: ConfigColor.primary,
                         fontWeight: FontWeight.bold)),

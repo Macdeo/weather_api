@@ -74,7 +74,7 @@ class _TemperatureStatusState extends State<TemperatureStatus> {
                 SizedBox(
                   height: MediaQuery.sizeOf(context).height * 0.15,
                   child: Text(
-                    '${currentDataTemp[0].toString().substring(0, 1)}°',
+                    '${currentDataTemp[0].round().toString()}°',
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: MediaQuery.sizeOf(context).height * 0.12),
