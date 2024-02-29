@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
               child: ListTile(
                 title: const Text(
                   'Weekly forecast',
-                  style: TextStyle(fontWeight: FontWeight.w800, fontSize: 17),
+                  style: TextStyle(fontWeight: FontWeight.w800, fontSize: 17, color: ConfigColor.black),
                 ),
                 trailing: Image.asset(
                   'assets/icons/right_arrow_50.png',
