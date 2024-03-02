@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:weather_api/bar_graph/individual_bar.dart';
 import 'package:weather_api/config/config_color.dart';
-import 'package:weather_api/model/getData.dart';
+import 'package:weather_api/model/get_data.dart';
 
 class TemperatureStatistics extends StatefulWidget {
   const TemperatureStatistics({super.key});

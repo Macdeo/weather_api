@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_api/config/config_color.dart';
-import 'package:weather_api/model/getData.dart';
+import 'package:weather_api/model/get_data.dart';
 
 class WeeklyForecast extends StatelessWidget {
   const WeeklyForecast({super.key});

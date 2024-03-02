@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:weather_api/config/config_color.dart';
-import 'package:weather_api/model_view/temperatureStatistics.dart';
-import 'package:weather_api/model_view/temperatureStatus.dart';
+import 'package:weather_api/model_view/temperature_statistics.dart';
+import 'package:weather_api/model_view/temperature_status.dart';
 import 'package:weather_api/model_view/weekly_forecast.dart';
 
 class Home extends StatefulWidget {

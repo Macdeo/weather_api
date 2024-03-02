@@ -3,7 +3,14 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 
+import 'package:logger/logger.dart';
+
 class GetData {
+
+  var logger = Logger(
+    printer: PrettyPrinter(),
+  );
+
   String api =
       'https://api.open-meteo.com/v1/gfs?latitude=52.52&longitude=13.41&hourly=temperature_2m,relative_humidity_2m,visibility,wind_speed_10m';
   String dailyApi =
@@ -38,11 +45,11 @@ class GetData {
         ret['totalTime'] = totalTime;
         ret['totalTemperature'] = totalTemperature;
       } else {
-        print(response.statusCode);
+        logger.d('The status code return is: ${response.statusCode}');
       }
     } catch (e) {
-      String message = 'Error fetching data because of: $e';
-      print(message);
+      var message = 'Error fetching data because of: $e';
+      logger.d(message);
     }
     return ret;
   }
@@ -53,8 +60,7 @@ class GetData {
 
     DateTime dateTime = DateTime.now();
     String hour = DateFormat('H').format(dateTime);
-    String day = DateFormat('d').format(dateTime);
-    print(day);
+    String day = DateFormat('dd').format(dateTime);
 
     try {
       if (response.statusCode == 200) {
@@ -92,10 +98,12 @@ class GetData {
         ret['totalHumidity'] = totalHumidity;
         ret['totalVisibility'] = totalVisibility;
         ret['totalWind'] = totalWind;
+      }else{
+        logger.d('The status code return is: ${response.statusCode}');
       }
     } catch (e) {
-      String message = 'Error fetching data because of: $e';
-      print(message);
+      var message = 'Error fetching data because of: $e';
+      logger.d(message);
     }
 
     return ret;
@@ -140,10 +148,12 @@ class GetData {
         ret['rainShower'] = rainShower;
 
 
+      }else{
+        logger.d('The status code return is: ${response.statusCode}');
       }
     } catch (e) {
-      String message = 'Error fetching data because of: $e';
-      print(message);
+      var message = 'Error fetching data because of: $e';
+      logger.d(message);
     }
 
     return ret;
